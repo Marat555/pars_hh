@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Найденные вакансии</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Найденные вакансии</h1>
+    <ul>
+        {% for vacancy in vacancies %}
+            <li>
+                <strong>{{ vacancy[0] }}</strong> - {{ vacancy[1] }}<br>
+                <a href="{{ vacancy[2] }}" target="_blank">Ссылка на вакансию</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <div>
+        {{ pagination.links }}
+    </div>
+    <a href="/">Назад к поиску</a>
+    <a href="/analytics">Посмотреть аналитику</a>
+</body>
+</html>

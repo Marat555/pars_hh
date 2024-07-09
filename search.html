@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск вакансий</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <h1>Поиск вакансий</h1>
+    <form method="post" action="/search">
+        <label for="keyword">Ключевое слово:</label>
+        <input type="text" id="keyword" name="keyword"><br>
+        <label for="fio">ФИО:</label>
+        <input type="text" id="fio" name="fio"><br>
+        <label for="position">Название должности:</label>
+        <input type="text" id="position" name="position"><br>
+        <label for="skills">Навыки:</label>
+        <input type="text" id="skills" name="skills"><br>
+        <label for="work_format">Формат работы:</label>
+        <input type="text" id="work_format" name="work_format"><br>
+        <input type="submit" value="Поиск">
+    </form>
+</body>
+</html>
